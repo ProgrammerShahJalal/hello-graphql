@@ -100,3 +100,7 @@ const products = [
     category: "4f7e6e15-96c2-445d-8bf8-79f58e3d061b",
   },
 ];
+
+export const db = {
+  products,
+};
