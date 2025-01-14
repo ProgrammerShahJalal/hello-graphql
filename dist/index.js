@@ -16,11 +16,15 @@ const typeDefs = `#graphql
 
   type Query {
     products : [Product]
+    product(productId: ID!): Product
   }
 `;
 const resolvers = {
     Query: {
         products: () => db.products,
+        product: (parent, args, context) => {
+            return db.products.find((product) => product.id === args.productId);
+        },
     },
 };
 const server = new ApolloServer({
