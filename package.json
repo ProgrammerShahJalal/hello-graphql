@@ -5,6 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "compile": "tsc -w",
     "start": "nodemon ./dist/index.js"
   },
